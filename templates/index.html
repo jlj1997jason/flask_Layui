@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/layui.css">
+</head>
+
+<body>
+    <div style="width: 800px;height: 400px;margin: 100px auto;">
+        <form class="layui-form" action="/login" method="POST">
+            <div class="layui-form-item">
+                <label class="layui-form-label">帳號</label>
+                <div class="layui-input-block">
+                    <input type="text" name="username" required lay-verify="required" placeholder="account"
+                        autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">密碼</label>
+                <div class="layui-input-inline">
+                    <input type="password" name="userpassword" required lay-verify="required" placeholder="password"
+                        autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="formDemo">送出</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        //Demo
+        layui.use('form', function () {
+            var form = layui.form;
+
+            // //监听提交
+            // form.on('submit(formDemo)', function (data) {
+            //     layer.msg(JSON.stringify(data.field));
+            //     return false;
+            // });
+        });
+    </script>
+
+    <script src="/static/layui.js"></script>
+</body>
+
+</html>
